@@ -1,0 +1,212 @@
+/* Modern CSS Theme for Pakistan Population Analytics Dashboard */
+
+/* Global container refinements */
+.main .block-container {
+    padding-top: 1.8rem;
+    padding-bottom: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    max-width: 1400px;
+}
+
+/* Header Banner */
+.dash-header {
+    background: linear-gradient(135deg, #1E3A8A 0%, #0F766E 100%);
+    color: #FFFFFF;
+    padding: 24px 28px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.dash-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    color: #FFFFFF !important;
+    letter-spacing: -0.5px;
+}
+
+.dash-header p {
+    font-size: 1rem;
+    color: #E2E8F0;
+    margin-top: 6px;
+    margin-bottom: 0;
+}
+
+/* KPI Card Grid */
+.kpi-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.kpi-card {
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 10px;
+    padding: 16px 18px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    border-top: 4px solid #2563EB;
+}
+
+.kpi-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+.kpi-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #64748B;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+
+.kpi-value {
+    font-size: 1.55rem;
+    font-weight: 700;
+    color: #0F172A;
+    line-height: 1.2;
+}
+
+.kpi-sub {
+    font-size: 0.8rem;
+    color: #64748B;
+    margin-top: 4px;
+}
+
+/* Specific Accent Border Tops for KPIs */
+.kpi-card.rural { border-top-color: #059669; }
+.kpi-card.urban { border-top-color: #2563EB; }
+.kpi-card.male { border-top-color: #1D4ED8; }
+.kpi-card.female { border-top-color: #EC4899; }
+.kpi-card.trans { border-top-color: #8B5CF6; }
+.kpi-card.growth { border-top-color: #D97706; }
+.kpi-card.density { border-top-color: #DC2626; }
+.kpi-card.area { border-top-color: #0D9488; }
+
+/* Breadcrumb & Filter Badges */
+.filter-badge-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    background-color: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.filter-badge {
+    background-color: #EFF6FF;
+    color: #1D4ED8;
+    border: 1px solid #BFDBFE;
+    padding: 3px 10px;
+    border-radius: 14px;
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+/* Insight Cards */
+.insight-card {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-left: 5px solid #0D9488;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 14px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.insight-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.insight-category {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #0D9488;
+    letter-spacing: 0.5px;
+}
+
+.insight-stat {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #1E293B;
+}
+
+.insight-body {
+    font-size: 0.92rem;
+    color: #334155;
+    line-height: 1.5;
+}
+
+/* Section Headings */
+.section-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0F172A;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 2px solid #E2E8F0;
+    padding-bottom: 6px;
+}
+
+/* Quality Warning Banner */
+.quality-box {
+    background-color: #FEF3C7;
+    border: 1px solid #FCD34D;
+    color: #92400E;
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-bottom: 16px;
+}
+
+/* Dark mode compatibility */
+@media (prefers-color-scheme: dark) {
+    .kpi-card {
+        background-color: #1E293B;
+        border-color: #334155;
+    }
+    .kpi-value {
+        color: #F8FAFC;
+    }
+    .kpi-label, .kpi-sub {
+        color: #94A3B8;
+    }
+    .filter-badge-bar {
+        background-color: #0F172A;
+        border-color: #334155;
+    }
+    .filter-badge {
+        background-color: #1E3A8A;
+        color: #93C5FD;
+        border-color: #3B82F6;
+    }
+    .insight-card {
+        background-color: #1E293B;
+        border-color: #334155;
+    }
+    .insight-body {
+        color: #CBD5E1;
+    }
+    .insight-stat {
+        color: #F8FAFC;
+    }
+    .section-title {
+        color: #F8FAFC;
+        border-bottom-color: #334155;
+    }
+}
